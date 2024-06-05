@@ -15,7 +15,7 @@ public class Student {
     // getters and setters methods
 
     public String getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(String id) {
@@ -37,7 +37,7 @@ public class Student {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -49,9 +49,11 @@ public class Student {
 class InnerStudent {
     public static void main(String[] args) {
         // Student object
-        Student studentA = new Student("15363873460",2.4,"MIcheal");
-        System.out.println("Name : "+ studentA.getName());
+        Student studentA = new Student("15363873460", 2.4, "MIcheal");
+        System.out.println("Name : " + studentA.getName());
         studentA.setGpa(2);
-        
+        studentA.setId("bdjslhjngahkrjetarn" + studentA.getGpa());
+        System.out.println(studentA.getGpa());
+
     }
 }
