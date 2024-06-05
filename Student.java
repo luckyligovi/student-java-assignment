@@ -52,7 +52,7 @@ class InnerStudent {
         Student studentA = new Student("15363873460", 2.4, "MIcheal");
         System.out.println("Name : " + studentA.getName());
         studentA.setGpa(2);
-        studentA.setId("bdjslhjngahkrjetarn" + studentA.getGpa());
+        studentA.setId("5836349" + studentA.getGpa());
         System.out.println(studentA.getGpa());
 
     }
