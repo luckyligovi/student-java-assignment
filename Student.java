@@ -12,14 +12,14 @@ public class Student {
 
     }
 
-    // getters and setters methods 
+    // getters and setters methods
 
     public String getId() {
         return this.id;
     }
 
     public void setId(String id) {
-
+        this.id = id;
     }
 
     public double getGpa() {
@@ -27,6 +27,12 @@ public class Student {
     }
 
     public void setGpa(double gpa) {
+        if (gpa > 0.0 && gpa < 4.0) {
+            this.gpa = gpa;
+            System.out.println("Gpa updated to : " + this.gpa);
+        } else {
+            System.out.println("invalid gpa value.The gpa should be between 0.0 and 4.0");
+        }
 
     }
 
@@ -35,7 +41,17 @@ public class Student {
     }
 
     public void setName(String name) {
-
+        this.name = name;
     }
 
+}
+
+class InnerStudent {
+    public static void main(String[] args) {
+        // Student object
+        Student studentA = new Student("15363873460",2.4,"MIcheal");
+        System.out.println("Name : "+ studentA.getName());
+        studentA.setGpa(2);
+        
+    }
 }
